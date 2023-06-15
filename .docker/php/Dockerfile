@@ -1,4 +1,4 @@
-FROM php:8.1-fpm-alpine
+FROM php:8.2-fpm-alpine
 
 RUN addgroup -g 1000 -S app && \
     adduser -u 1000 -S app -G app

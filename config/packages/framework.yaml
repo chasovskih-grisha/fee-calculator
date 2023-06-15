@@ -18,6 +18,17 @@ framework:
     php_errors:
         log: true
 
+    http_client:
+        scoped_clients:
+            # only requests matching scope will use these options
+            binlist.client:
+                base_uri: 'https://lookup.binlist.net'
+
+            # using base_uri, relative URLs (e.g. request("GET", "/repos/symfony/symfony-docs"))
+            # will default to these options
+            exchangeratesapi.client:
+                base_uri: 'http://api.exchangeratesapi.io'
+
 when@test:
     framework:
         test: true

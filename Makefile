@@ -11,6 +11,11 @@ start: docker-up composer
 stop: docker-down
 restart: stop start
 
+execute:
+	make start
+	$(DOCKER_CONSOLE) a:f:c
+	make stop
+
 ## Docker ##
 
 docker-up:

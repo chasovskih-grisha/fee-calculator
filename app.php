@@ -61,8 +61,7 @@ function isEu($c) {
         case 'RO':
         case 'SE':
         case 'SI':
-        case 'S
-        K':
+        case 'SK':
             $result = 'yes';
             return $result;
         default:
