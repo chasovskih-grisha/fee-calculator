@@ -9,6 +9,8 @@ use App\Domain\Value\Currency;
 
 class FeeCalculator
 {
+    private const DEFAULT_CURRENCY = 'EUR';
+
     private const PRECISION = 2;
 
     public function __construct(
@@ -18,7 +20,7 @@ class FeeCalculator
 
     public function calculate(Transaction $transaction): float
     {
-        $total = $transaction->currency->eq(new Currency('EUR'))
+        $total = $transaction->currency->eq(new Currency(self::DEFAULT_CURRENCY))
             ? $transaction->amount
             : $transaction->amount / $this->currencyRateProvider->get($transaction->currency);
 
