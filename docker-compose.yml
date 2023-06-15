@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  php:
+    container_name: fee-calculator-php
+    restart: on-failure
+    build: .docker/php
+    user: app
+    volumes:
+      - .:/var/www/app
+    env_file:
+      - .env

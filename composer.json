@@ -1,0 +1,46 @@
+{
+    "name": "chasovskih-grisha/fee-calculator",
+    "type": "project",
+    "license": "proprietary",
+    "description": "Fee calculator",
+    "require": {
+        "php": "8.1.20",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "composer-plugin-api": "^2.0",
+        "composer/package-versions-deprecated": "^1.11",
+        "moneyphp/money": "^3.3"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.8",
+        "phpmetrics/phpmetrics": "^2.8",
+        "phpunit/php-code-coverage": "^9.2",
+        "phpunit/phpunit": "9.6.6",
+        "roave/security-advisories": "dev-latest"
+    },
+    "config": {
+        "process-timeout": 0,
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true,
+        "allow-plugins": {
+            "symfony/flex": true,
+            "php-http/discovery": true
+        }
+    },
+    "scripts": {
+        "auto-scripts": {
+            "requirements-checker": "script"
+        }
+    },
+    "conflict": {
+        "symfony/symfony": "*"
+    },
+    "extra": {
+        "symfony": {
+            "allow-contrib": false,
+            "require": "5.*"
+        }
+    }
+}
