@@ -1,7 +1,7 @@
 {
     "name": "chasovskih-grisha/fee-calculator",
     "type": "project",
-    "license": "proprietary",
+    "license": "MIT",
     "description": "Fee calculator",
     "require": {
         "php": "8.1.20",
@@ -9,14 +9,21 @@
         "ext-json": "*",
         "composer-plugin-api": "^2.0",
         "composer/package-versions-deprecated": "^1.11",
-        "moneyphp/money": "^3.3"
+        "moneyphp/money": "^3.3",
+        "symfony/console": "6.3.*",
+        "symfony/dotenv": "6.3.*",
+        "symfony/flex": "^2",
+        "symfony/framework-bundle": "6.3.*",
+        "symfony/runtime": "6.3.*",
+        "symfony/yaml": "6.3.*"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.8",
         "phpmetrics/phpmetrics": "^2.8",
         "phpunit/php-code-coverage": "^9.2",
         "phpunit/phpunit": "9.6.6",
-        "roave/security-advisories": "dev-latest"
+        "roave/security-advisories": "dev-latest",
+        "symfony/phpunit-bridge": "^6.3"
     },
     "config": {
         "process-timeout": 0,
@@ -25,13 +32,35 @@
         },
         "sort-packages": true,
         "allow-plugins": {
+            "php-http/discovery": true,
             "symfony/flex": true,
-            "php-http/discovery": true
+            "symfony/runtime": true
         }
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\Tests\\": "tests/"
+        }
+    },
+    "replace": {
+        "symfony/polyfill-ctype": "*",
+        "symfony/polyfill-iconv": "*",
+        "symfony/polyfill-php72": "*",
+        "symfony/polyfill-php73": "*",
+        "symfony/polyfill-php74": "*",
+        "symfony/polyfill-php80": "*",
+        "symfony/polyfill-php81": "*"
     },
     "scripts": {
         "auto-scripts": {
-            "requirements-checker": "script"
+            "requirements-checker": "script",
+            "cache:clear": "symfony-cmd",
+            "assets:install %PUBLIC_DIR%": "symfony-cmd"
         }
     },
     "conflict": {
@@ -40,7 +69,7 @@
     "extra": {
         "symfony": {
             "allow-contrib": false,
-            "require": "5.*"
+            "require": "6.3.*"
         }
     }
 }

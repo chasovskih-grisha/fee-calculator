@@ -13,14 +13,16 @@ var/cache/*
 vendor/
 ###< symfony/framework-bundle ###
 
-###> phpunit/phpunit ###
-.phpunit
-.phpunit.result.cache
-###< phpunit/phpunit ###
-
 ###> friendsofphp/php-cs-fixer ###
 var/tmp/fixer/php-cs-fixer.cache
 .php-cs-fixer.cache
+.php-cs-fixer.dist.php
 ###< friendsofphp/php-cs-fixer ###
+
+###> symfony/phpunit-bridge ###
+.phpunit.result.cache
+/phpunit.xml
+.phpunit
+###< symfony/phpunit-bridge ###
 
 !*.gitkeep
