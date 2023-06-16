@@ -1,5 +1,5 @@
 controllers:
     resource:
-        path: ../src/Domain/Controller/
-        namespace: App\Domain\Controller
+        path: ../src/Domain/Endpoint/
+        namespace: App\Domain\Endpoint
     type: attribute
