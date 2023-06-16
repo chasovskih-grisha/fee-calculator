@@ -75,7 +75,7 @@ psalm:
 ## TESTS ##
 
 phpunit:
-	$(DOCKER_EXEC) bin/phpunit src
+	$(DOCKER_EXEC) bin/phpunit
 
 ## PHP Metrics ##
 

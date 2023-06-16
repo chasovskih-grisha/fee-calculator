@@ -1,0 +1,9 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+
+  # Infastructure services
+
+  App\Domain\Service\Provider\CountryCodeProviderInterface: '@App\Infrastructure\Service\Provider\Mocks\RandomCountryCodeProvider'
+  App\Domain\Service\Provider\CurrencyRateProviderInterface: '@App\Infrastructure\Service\Provider\Mocks\RandomCurrencyRateProvider'
