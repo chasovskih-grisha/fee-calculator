@@ -2,6 +2,10 @@ services:
   _defaults:
     autowire: true
     autoconfigure: true
+    public: true
+
+  App\Infrastructure\Service\Provider\BinListCountryCodeProvider:
+    public: true
 
   # Infastructure services
 

@@ -11,5 +11,6 @@ class Transaction
         public readonly Bin $bin,
         public readonly float $amount,
         public readonly Currency $currency,
-    ) { }
+    ) {
+    }
 }

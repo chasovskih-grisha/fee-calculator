@@ -29,6 +29,5 @@ abstract class AbstractStringValue implements StringValueInterface
 
     protected function assert(): void
     {
-
     }
 }

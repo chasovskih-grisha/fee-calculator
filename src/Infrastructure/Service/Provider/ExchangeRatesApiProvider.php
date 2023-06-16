@@ -11,9 +11,10 @@ use Symfony\Contracts\HttpClient\HttpClientInterface;
 class ExchangeRatesApiProvider implements CurrencyRateProviderInterface
 {
     public function __construct(
-        private HttpClientInterface $exchangeratesapiClient,
-        private string $accessKey,
-    ) { }
+        private readonly HttpClientInterface $exchangeratesapiClient,
+        private readonly string $accessKey,
+    ) {
+    }
 
     public function get(Currency $currency): float
     {

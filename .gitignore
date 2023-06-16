@@ -11,6 +11,7 @@ var/cache/*
 .env.test
 .env.*.php
 vendor/
+var/tmp/*
 ###< symfony/framework-bundle ###
 
 ###> friendsofphp/php-cs-fixer ###

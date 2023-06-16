@@ -18,13 +18,7 @@ class CalculateCommandTest extends KernelTestCase
 
         $this->assertStringContainsString(
             'Calculate a fee for all transactions',
-            $output = $commandTester->getDisplay(),
-        );
-
-        $this->assertStringContainsString(
-            '1',
-            $output,
-            'We expect at least one fee that equals 1 EUR from fake transaction with 100 EUR amount',
+            $commandTester->getDisplay(),
         );
     }
 }

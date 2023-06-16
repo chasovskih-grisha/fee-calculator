@@ -51,8 +51,8 @@ class FeeCalculatorTest extends TestCase
     public function provideCalculate(): array
     {
         return [
-            [10, 'USD', 1.2, 0.02, 0.17],
-            [10, 'EUR', 1, 0.01, 0.1],
+            [10, 'USD', 1.20, 0.02, 0.17],
+            [10, 'EUR', 1.00, 0.01, 0.10],
         ];
     }
 }

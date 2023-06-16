@@ -9,6 +9,6 @@ class RandomCurrencyRateProvider implements CurrencyRateProviderInterface
 {
     public function get(Currency $currency): float
     {
-        return $currency->eq(new Currency('EUR')) ? 1 : random_int(0.01, 10000) / 100;
+        return $currency->eq(new Currency('EUR')) ? 1 : random_int(1, 10000) / 100;
     }
 }

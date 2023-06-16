@@ -14,9 +14,10 @@ class FeeCalculator
     private const PRECISION = 2;
 
     public function __construct(
-        private CurrencyRateProviderInterface $currencyRateProvider,
-        private FeePercentProvider $feePercentProvider
-    ) { }
+        private readonly CurrencyRateProviderInterface $currencyRateProvider,
+        private readonly FeePercentProvider $feePercentProvider
+    ) {
+    }
 
     public function calculate(Transaction $transaction): float
     {

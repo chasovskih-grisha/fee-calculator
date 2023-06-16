@@ -13,6 +13,7 @@ restart: stop start
 
 execute:
 	make start
+	make test
 	$(DOCKER_CONSOLE) a:f:c
 	make stop
 
@@ -61,7 +62,7 @@ git-pull-origin:
 
 ## PHP CS FIXER ##
 
-FIXER_OPTIONS = --diff --config=config/tools/php-cs-fixer.php --cache-file=var/tmp/php-cs-fixer.cache
+FIXER_OPTIONS = --diff --cache-file=var/tmp/php-cs-fixer.cache
 
 fixer:
 	$(DOCKER_EXEC) vendor/bin/php-cs-fixer fix src $(FIXER_OPTIONS)

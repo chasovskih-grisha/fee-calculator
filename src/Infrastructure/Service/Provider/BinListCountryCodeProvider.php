@@ -12,8 +12,9 @@ use Symfony\Contracts\HttpClient\HttpClientInterface;
 class BinListCountryCodeProvider implements CountryCodeProviderInterface
 {
     public function __construct(
-        private HttpClientInterface $binlistClient,
-    ) { }
+        private readonly HttpClientInterface $binlistClient,
+    ) {
+    }
 
     public function get(Bin $bin): ?Country
     {

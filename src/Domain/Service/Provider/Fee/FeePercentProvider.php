@@ -10,12 +10,13 @@ class FeePercentProvider
 {
     private const DEFAULT_FEE = 0.02;
     private const FEES = [
-        Region::EU->value => 0.01
+        Region::EU->value => 0.01,
     ];
 
     public function __construct(
-        private RegionMatcher $regionMatcher,
-    ) { }
+        readonly private RegionMatcher $regionMatcher,
+    ) {
+    }
 
     public function get(Transaction $transaction): float
     {

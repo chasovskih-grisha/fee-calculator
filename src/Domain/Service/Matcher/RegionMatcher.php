@@ -40,11 +40,9 @@ class RegionMatcher
         ],
     ];
 
-    private CountryCodeProviderInterface $countryCodeProvider;
-
-    public function __construct(CountryCodeProviderInterface $countryCodeProvider)
-    {
-        $this->countryCodeProvider = $countryCodeProvider;
+    public function __construct(
+        readonly private CountryCodeProviderInterface $countryCodeProvider,
+    ) {
     }
 
     public function match(Bin $bin, Region $region): bool
