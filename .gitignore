@@ -12,6 +12,7 @@ var/cache/*
 .env.*.php
 vendor/
 var/tmp/*
+public/metrics/
 ###< symfony/framework-bundle ###
 
 ###> friendsofphp/php-cs-fixer ###
